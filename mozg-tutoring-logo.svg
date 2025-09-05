@@ -1,0 +1,72 @@
+<svg viewBox="0 0 400 440" width="400" height="420">
+  <!-- Outer Circle -->
+  <circle cx="200" cy="210" r="180" stroke="#29487d" stroke-width="6" fill="none" />
+  
+  <!-- Brain (detailed stylized) -->
+  <g>
+    <!-- Outline Left Hemisphere -->
+    <path d="M200,120 
+             Q145,125 120,175 
+             Q90,240 140,295 
+             Q130,340 175,350 
+             Q120,320 155,290 
+             Q125,265 160,250 
+             Q120,230 150,205 
+             Q110,180 170,170 
+             Q145,200 175,210 
+             Q160,190 195,190"
+          fill="#ffe0b2" stroke="#ffb84d" stroke-width="5"/>
+    <!-- Outline Right Hemisphere -->
+    <path d="M200,120 
+             Q255,125 280,175 
+             Q310,240 260,295 
+             Q270,340 225,350 
+             Q280,320 245,290 
+             Q275,265 240,250 
+             Q280,230 250,205 
+             Q290,180 230,170 
+             Q255,200 225,210 
+             Q240,190 205,190"
+          fill="#ffe0b2" stroke="#ffb84d" stroke-width="5"/>
+    <!-- Central Brain Fold -->
+    <path d="M200,120 Q200,140 195,190 Q200,200 205,190 Q200,140 200,120" 
+          fill="#ffdca8" stroke="#ffb84d" stroke-width="3"/>
+    <!-- Inner Brain Folds Left -->
+    <path d="M170,170 Q140,200 175,210" fill="none" stroke="#ffb84d" stroke-width="3"/>
+    <path d="M155,290 Q135,260 160,250" fill="none" stroke="#ffb84d" stroke-width="3"/>
+    <path d="M175,350 Q145,340 175,320" fill="none" stroke="#ffb84d" stroke-width="3"/>
+    <path d="M150,205 Q130,220 160,230" fill="none" stroke="#ffb84d" stroke-width="2"/>
+    <!-- Inner Brain Folds Right -->
+    <path d="M230,170 Q260,200 225,210" fill="none" stroke="#ffb84d" stroke-width="3"/>
+    <path d="M245,290 Q265,260 240,250" fill="none" stroke="#ffb84d" stroke-width="3"/>
+    <path d="M225,350 Q255,340 225,320" fill="none" stroke="#ffb84d" stroke-width="3"/>
+    <path d="M250,205 Q270,220 240,230" fill="none" stroke="#ffb84d" stroke-width="2"/>
+    <!-- Corpus Callosum -->
+    <ellipse cx="200" cy="210" rx="12" ry="5" fill="#ffdca8" stroke="#ffb84d" stroke-width="2"/>
+  </g>
+  
+  <!-- Math Symbols (Post-graduate level) -->
+  <g font-size="32" font-family="Cambria Math, STIXGeneral, Times New Roman, serif" fill="#29487d" font-weight="bold">
+    <!-- Top -->
+    <text x="183" y="62">∮</text>
+    <!-- Top Right -->
+    <text x="300" y="100">ℵ₀</text>
+    <!-- Right -->
+    <text x="345" y="210">𝔻</text>
+    <!-- Bottom Right -->
+    <text x="275" y="320">𝒢(𝑥)</text>
+    <!-- Bottom -->
+    <text x="182" y="380">⊗</text>
+    <!-- Bottom Left -->
+    <text x="75" y="340">𝔏²</text>
+    <!-- Left -->
+    <text x="25" y="220">ℝⁿ</text>
+    <!-- Top Left -->
+    <text x="75" y="105">∇²</text>
+  </g>
+  
+  <!-- Service Name -->
+  <text x="200" y="425" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="38" fill="#29487d" font-weight="bold">
+    Mozg Tutoring
+  </text>
+</svg>
