@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mozg Tutoring</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/modern.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="brand"><span class="dot"></span> Mozg Tutoring</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <section class="hero">
+        <div>
+          <h1 class="title">Personalized Math & CS Tutoring</h1>
+          <p class="subtitle">Theory grounded. Practice driven. Outcomes focused.</p>
+          <a class="button" href="#contact">Book a session</a>
+        </div>
+        <div class="cards">
+          <div class="card"><h3>Algebra</h3><p>Group theory, rings, fields.</p></div>
+          <div class="card"><h3>Algorithms</h3><p>Graphs, DP, complexity.</p></div>
+          <div class="card"><h3>ML/AI</h3><p>Math foundations for deep learning.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact section -->
+    <!-- Include the content of partials/contact-section.html here -->
+    <section class="section">
+      <div class="container">
+        <!-- paste contact section here if not using server-side includes -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">© <span id="y"></span> Mozg Tutoring</div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    <script type="module" src="assets/js/contact.js"></script>
+  </body>
+</html>
