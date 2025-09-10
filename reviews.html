@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reviews • Mozg Tutoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-brain-math.svg">
+    <link rel="stylesheet" href="assets/css/modern.css">
+    <link rel="stylesheet" href="assets/css/logo.css">
+    <link rel="stylesheet" href="assets/css/reviews.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="./" aria-label="Mozg Tutoring home">
+          <img class="logo" src="assets/img/logo-brain-math.svg" alt="">
+          <span class="brand-title">Mozg Tutoring</span>
+        </a>
+        <nav>
+          <a href="./#about">About</a>
+          <a href="./#contact">Contact</a>
+          <a href="./reviews.html">Reviews</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <section class="section">
+        <h1 class="title">Reviews</h1>
+        <p class="subtitle">Public reviews are shown below. iSETU submissions are private (write-only); their star ratings contribute to the overall stats but the text is not displayed.</p>
+
+        <div id="review-stats" class="review-stats card" aria-live="polite">
+          <div class="stat-main">
+            <div class="stat-score">
+              <span id="avg-rating" class="big-score">–</span>
+              <span class="out-of">/ 5</span>
+            </div>
+            <div id="avg-stars" class="stars stars-lg" aria-label="Average rating"></div>
+          </div>
+          <div class="stat-meta">
+            <div><strong id="review-count">0</strong> public reviews</div>
+            <div><strong id="isetu-count">0</strong> iSETU submissions</div>
+          </div>
+          <div id="rating-dist" class="dist"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cards">
+          <div class="card">
+            <h2>Submit a review</h2>
+            <form id="review-form" class="form" aria-describedby="review-status" novalidate>
+              <div class="row">
+                <div>
+                  <label for="r-name">Name (optional)</label>
+                  <input id="r-name" name="name" class="input" maxlength="100" placeholder="Ada Lovelace">
+                </div>
+                <div>
+                  <label for="r-rating">Rating</label>
+                  <div id="r-rating" class="star-input" role="radiogroup" aria-label="Rating out of five">
+                    <!-- Stars created by JS -->
+                  </div>
+                  <input type="hidden" id="r-rating-val" name="rating" value="">
+                </div>
+              </div>
+              <div>
+                <label for="r-text">Review</label>
+                <textarea id="r-text" name="text" class="textarea" maxlength="4000" placeholder="Share your experience..."></textarea>
+              </div>
+              <div>
+                <label class="checkbox">
+                  <input type="checkbox" id="r-isetu" name="is_iSETU">
+                  <span>This is an iSETU review (text stays private; star rating is counted)</span>
+                </label>
+              </div>
+              <div class="form-footer">
+                <button class="button" type="submit">Submit review</button>
+                <span id="review-status" class="help">Thank you for your feedback.</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h2>Upload iSETU review image (Admin)</h2>
+            <form id="image-form" class="form" aria-describedby="image-status">
+              <div class="row">
+                <div>
+                  <label for="img-file">Image</label>
+                  <input id="img-file" name="file" class="input" type="file" accept="image/png,image/jpeg,image/webp" required>
+                </div>
+                <div>
+                  <label for="img-caption">Caption (optional)</label>
+                  <input id="img-caption" name="caption" class="input" maxlength="200" placeholder="2024 S2 iSETU">
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="img-token">Admin token</label>
+                  <input id="img-token" name="token" class="input" placeholder="Required to upload">
+                </div>
+              </div>
+              <div class="form-footer">
+                <button class="button" type="submit">Upload image</button>
+                <span id="image-status" class="help">PNG/JPEG/WEBP up to ~5MB. Private text can be redacted in the image.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Image gallery (iSETU screenshots)</h2>
+        <p class="section-desc">These uploaded images are viewable. Private textual iSETU content is not stored as public text.</p>
+        <div id="image-gallery" class="gallery"></div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Public reviews</h2>
+        <div id="reviews-list" class="reviews"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© <span id="y"></span> Mozg Tutoring</div>
+    </footer>
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    <script type="module" src="assets/js/reviews.js"></script>
+  </body>
+</html>
