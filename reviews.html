@@ -17,8 +17,8 @@
           <span class="brand-title">Mozg Tutoring</span>
         </a>
         <nav>
-          <a href="./#about">About</a>
-          <a href="./#contact">Contact</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
           <a href="./reviews.html">Reviews</a>
         </nav>
       </div>
@@ -27,7 +27,7 @@
     <main class="container section">
       <section class="section">
         <h1 class="title">Reviews</h1>
-        <p class="subtitle">Public reviews are shown below. iSETU submissions are private (write-only); their star ratings contribute to the overall stats but the text is not displayed.</p>
+        <p class="subtitle">Public reviews are shown below. iSETU submissions are private (write-only text); their star ratings are counted and images are displayed if provided.</p>
 
         <div id="review-stats" class="review-stats card" aria-live="polite">
           <div class="stat-main">
@@ -41,8 +41,28 @@
             <div><strong id="review-count">0</strong> public reviews</div>
             <div><strong id="isetu-count">0</strong> iSETU submissions</div>
           </div>
-          <div id="rating-dist" class="dist"></div>
+          <div id="rating-dist" class="dist" title="Click a bar to filter iSETU images by rating"></div>
         </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">iSETU reviews (screenshots)</h2>
+        <p class="section-desc">Click a star category to drill down, or use sorting. The bars above are clickable as well.</p>
+        <div id="isetu-toolbar" class="toolbar">
+          <div id="isetu-filters" class="chips" role="tablist" aria-label="Filter by rating">
+            <!-- chips inserted by JS -->
+          </div>
+          <div class="sorter">
+            <label for="isetu-sort">Sort</label>
+            <select id="isetu-sort" class="input">
+              <option value="newest" selected>Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="rating-desc">Rating: high → low</option>
+              <option value="rating-asc">Rating: low → high</option>
+            </select>
+          </div>
+        </div>
+        <div id="isetu-gallery" class="gallery"></div>
       </section>
 
       <section class="section">
@@ -57,9 +77,7 @@
                 </div>
                 <div>
                   <label for="r-rating">Rating</label>
-                  <div id="r-rating" class="star-input" role="radiogroup" aria-label="Rating out of five">
-                    <!-- Stars created by JS -->
-                  </div>
+                  <div id="r-rating" class="star-input" role="radiogroup" aria-label="Rating out of five"></div>
                   <input type="hidden" id="r-rating-val" name="rating" value="">
                 </div>
               </div>
@@ -106,12 +124,6 @@
             </form>
           </div>
         </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">Image gallery (iSETU screenshots)</h2>
-        <p class="section-desc">These uploaded images are viewable. Private textual iSETU content is not stored as public text.</p>
-        <div id="image-gallery" class="gallery"></div>
       </section>
 
       <section class="section">
